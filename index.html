@@ -23,8 +23,27 @@
     itemprop="description">
   <meta content="https://www.hawessilverband.org.uk/assets/on-the-green-2-2.jpg" itemprop="image">
 
-  <link data-turbolinks-track="true" href="./assets/application.css" media="all" rel="stylesheet">
-  <script data-turbolinks-track="true" src="./assets/application.js"></script>
+  <link href="./assets/application.css" media="all" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('ul.navbar-nav li.scroll').click(function (event) {
+        event.preventDefault();
+        $('ul.navbar-nav li').removeClass('active');
+        $(this).addClass('active');
+        if ($('.navbar-collapse').hasClass('in'))
+          $('.navbar-collapse').collapse('hide');
+        var target = $(this).children('a').attr('href');
+        var targetPosition = 0;
+        if (target != '#home')
+          targetPosition = $(target).offset().top - 50;
+
+        $('html, body').animate({
+          scrollTop: targetPosition
+        }, 1000);
+      })
+    });
+  </script>
 </head>
 
 <body id="home">
@@ -87,8 +106,8 @@
           <h3>About</h3>
           <p>Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year, including
             the Hawes Gala, Semerwater Lakeside Service, village community events in Wensleydale, and for the last twenty
-            years has combined with the Aysgarth Voices, East Witton Male Voice Choir and the Young Singers Choir, directed
-            by Barbara Roocroft to present the Annual Christmas Charity Concert to support national, regional and local charity
+            years has combined with the Aysgarth Voices directed by Stan Roocroft and the Young Voices Choir, directed by
+            Barbara Roocroft to present the Annual Christmas Charity Concert to support national, regional and local charity
             organisations.
           </p>
           <p>The band members travel from places far away as Sedbergh, Pateley Bridge and Leyburn to rehearse on Sunday evenings
@@ -238,7 +257,7 @@
               </p>
               <p>
                 <span class="glyphicon glyphicon-calendar"></span>
-                30 July 2018, 2:15 pm
+                29 July 2018, 2:15 pm
               </p>
               <p></p>
               <p>An afternoon of country fun including stalls, teas, a dog show and a fell run - plus, of course, music from
@@ -423,15 +442,13 @@
                 Remembrance Day Concert
               </h4>
               <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                To be confirmed
               </p>
               <p>
                 <span class="glyphicon glyphicon-calendar"></span>
-                11 November 2018, 10:15 am
+                11 November 2018
               </p>
               <p></p>
-              <p>Brian Woof, our principal cornet player, plays the Last Post and the band accompanies the hymns.
+              <p>Time & venue to be confirmed.
                 <br>
               </p>
               <p></p>
@@ -501,10 +518,11 @@
                 21 December 2018, 7:30 pm
               </p>
               <p></p>
-              <p>Hawes Silver Band has a long tradition of playing a Christmas concert for charity. £2242 for St Teresa's Hospice,
-                Darlington including match-funding by Barclays Bank. This year's charity will be announced later. </p>
-              <p>This year, the band will be joined by the Aysgarth Singers for a varied and enjoyable joint concert. This event
-                is a great way to start your Christmas celebrations.
+              <p>Hawes Silver Band has a long tradition of playing a Christmas concert for charity. Last year's Concert raised
+                £2242 for St Teresa's Hospice, Darlington including match-funding by Barclays Bank. This year's charity will
+                be announced later. </p>
+              <p>This year, the band will be joined by Aysgarth Singers and the Young Voices for a varied and enjoyable joint
+                concert. This event is a great way to start your Christmas celebrations.
                 <br>
               </p>
               <p></p>
