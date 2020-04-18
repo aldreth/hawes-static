@@ -34,22 +34,20 @@
     <link href="./assets/application.css" media="all" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
-      $(document).ready(function() {
-        $("ul.navbar-nav li.scroll").click(function(event) {
+      $(document).ready(function () {
+        $("ul.navbar-nav li.scroll").click(function (event) {
           event.preventDefault();
           $("ul.navbar-nav li").removeClass("active");
           $(this).addClass("active");
           if ($(".navbar-collapse").hasClass("in"))
             $(".navbar-collapse").collapse("hide");
-          var target = $(this)
-            .children("a")
-            .attr("href");
+          var target = $(this).children("a").attr("href");
           var targetPosition = 0;
           if (target != "#home") targetPosition = $(target).offset().top - 50;
 
           $("html, body").animate(
             {
-              scrollTop: targetPosition
+              scrollTop: targetPosition,
             },
             1000
           );
@@ -152,6 +150,16 @@
               The school log books record that children were absent from school
               to help with the preparations so it was truly a community effort.
             </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-info" role="alert">
+              Due to the Corona virus crisis, all the engagements listed below
+              are on hold awaiting the lifting of current restrictions.
+            </div>
           </div>
         </div>
       </div>
@@ -646,22 +654,20 @@
       </div>
 
       <script>
-        $(document).ready(function() {
-          $("ul.navbar-nav li.scroll").click(function(event) {
+        $(document).ready(function () {
+          $("ul.navbar-nav li.scroll").click(function (event) {
             event.preventDefault();
             $("ul.navbar-nav li").removeClass("active");
             $(this).addClass("active");
             if ($(".navbar-collapse").hasClass("in"))
               $(".navbar-collapse").collapse("hide");
-            var target = $(this)
-              .children("a")
-              .attr("href");
+            var target = $(this).children("a").attr("href");
             var targetPosition = 0;
             if (target != "#home") targetPosition = $(target).offset().top - 50;
 
             $("html, body").animate(
               {
-                scrollTop: targetPosition
+                scrollTop: targetPosition,
               },
               1000
             );
