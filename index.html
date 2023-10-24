@@ -31,8 +31,8 @@
         event.preventDefault();
         $("ul.navbar-nav li").removeClass("active");
         $(this).addClass("active");
-        if ($(".navbar-collapse").hasClass("in"))
-          $(".navbar-collapse").collapse("hide");
+        if (!$(".navbar-collapse").hasClass("collapse"))
+          $(".navbar-collapse").addClass("collapse");
         var target = $(this).children("a").attr("href");
         var targetPosition = 0;
         if (target != "#home") targetPosition = $(target).offset().top - 50;
@@ -44,6 +44,10 @@
           1000
         );
       });
+      $(".navbar-toggle").click(function (event) {
+        event.preventDefault();
+        $(".navbar-collapse").toggleClass("collapse")
+      })
     });
   </script>
 </head>
