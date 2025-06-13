@@ -1,182 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hawes Silver Band</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script async="" src="https://www.google-analytics.com/ga.js"></script>
+    <meta
+      content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
+      name="description"
+    />
+    <meta content="Hawes Silver Band" property="og:title" />
+    <meta content="https://www.hawessilverband.org.uk/" property="og:url" />
+    <meta
+      content="https://www.hawessilverband.org.uk/assets/on-the-green-2-2.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
+      property="og:description"
+    />
+    <meta content="summary" name="twitter:card" />
+    <meta content="Hawes Silver Band" name="twitter:title" />
+    <meta
+      content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
+      name="twitter:description"
+    />
+    <meta
+      content="https://www.hawessilverband.org.uk/assets/on-the-green-2-2.jpg"
+      name="twitter:image"
+    />
+    <meta content="https://www.hawessilverband.org.uk" name="twitter:url" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Hawes Silver Band</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <script async="" src="https://www.google-analytics.com/ga.js"></script>
-  <meta
-    content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
-    name="description" />
-  <meta content="Hawes Silver Band" property="og:title" />
-  <meta content="https://www.hawessilverband.org.uk/" property="og:url" />
-  <meta content="https://www.hawessilverband.org.uk/assets/on-the-green-2-2.jpg" property="og:image" />
-  <meta
-    content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
-    property="og:description" />
-  <meta content="summary" name="twitter:card" />
-  <meta content="Hawes Silver Band" name="twitter:title" />
-  <meta
-    content="Hawes Silver Band, which was formed around 1865, fulfils many engagements in Wensleydale every year. It is a typical brass band full of friendly people of all ages. The music is varied and the emphasis is on everyone enjoying music-making."
-    name="twitter:description" />
-  <meta content="https://www.hawessilverband.org.uk/assets/on-the-green-2-2.jpg" name="twitter:image" />
-  <meta content="https://www.hawessilverband.org.uk" name="twitter:url" />
+    <link href="./assets/application.css" media="all" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("ul.navbar-nav li.scroll").click(function (event) {
+          event.preventDefault();
+          $("ul.navbar-nav li").removeClass("active");
+          $(this).addClass("active");
+          if (!$(".navbar-collapse").hasClass("collapse"))
+            $(".navbar-collapse").addClass("collapse");
+          var target = $(this).children("a").attr("href");
+          var targetPosition = 0;
+          if (target != "#home") targetPosition = $(target).offset().top - 50;
 
-  <link href="./assets/application.css" media="all" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("ul.navbar-nav li.scroll").click(function (event) {
-        event.preventDefault();
-        $("ul.navbar-nav li").removeClass("active");
-        $(this).addClass("active");
-        if (!$(".navbar-collapse").hasClass("collapse"))
-          $(".navbar-collapse").addClass("collapse");
-        var target = $(this).children("a").attr("href");
-        var targetPosition = 0;
-        if (target != "#home")
-          targetPosition = $(target).offset().top - 50;
-
-        $("html, body").animate(
-          {
-            scrollTop: targetPosition,
-          },
-          1000,
-        );
+          $("html, body").animate(
+            {
+              scrollTop: targetPosition,
+            },
+            1000
+          );
+        });
+        $(".navbar-toggle").click(function (event) {
+          event.preventDefault();
+          $(".navbar-collapse").toggleClass("collapse");
+        });
       });
-      $(".navbar-toggle").click(function (event) {
-        event.preventDefault();
-        $(".navbar-collapse").toggleClass("collapse");
-      });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body id="home">
-  <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
+  <body id="home">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              class="navbar-toggle"
+              data-target=".navbar-collapse"
+              data-toggle="collapse"
+              type="button"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://hawessilverband.org.uk/"
+              >Hawes Silver Band</a
+            >
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav pull-right">
+              <li class="scroll active">
+                <a href="#home">Home</a>
+              </li>
+              <li class="scroll">
+                <a href="#about">About</a>
+              </li>
+              <li class="scroll">
+                <a href="#news">News</a>
+              </li>
+              <li class="scroll">
+                <a href="#next">Concerts &amp; Events</a>
+              </li>
+              <li class="scroll">
+                <a href="#conductor">Conductor</a>
+              </li>
+              <li class="scroll">
+                <a href="#meet-the-band">Meet the Band</a>
+              </li>
+              <li class="scroll">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
       <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="https://hawessilverband.org.uk/">Hawes Silver Band</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <li class="scroll active">
-              <a href="#home">Home</a>
-            </li>
-            <li class="scroll">
-              <a href="#about">About</a>
-            </li>
-            <li class="scroll">
-              <a href="#news">News</a>
-            </li>
-            <li class="scroll">
-              <a href="#next">Concerts &amp; Events</a>
-            </li>
-            <li class="scroll">
-              <a href="#conductor">Conductor</a>
-            </li>
-            <li class="scroll">
-              <a href="#meet-the-band">Meet the Band</a>
-            </li>
-            <li class="scroll">
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="title">Hawes Silver Band</h1>
-          <figure class="img-thumbnail">
-            <img alt="On%20the%20green%202 2" src="./assets/on-the-green-2-2.jpg" />
-            <figcaption>Photo: Betsy Everett</figcaption>
-          </figure>
-        </div>
-        <div class="col-md-12" id="about">
-          <h3>About</h3>
-          <p>
-            Hawes Silver Band, which was formed about 1865,
-            fulfils engagements in Wensleydale every year,
-            including the Semerwater lakeside ecumenical
-            service, and community events. The annual Christmas
-            Charity concert supports national, regional and
-            local charity organisations.
-          </p>
-          <p>
-            The band members travel from places as far afield as
-            Sedbergh and Leyburn to rehearse on Sunday evenings
-            in the Market House in Hawes. It is a typical brass
-            band welcoming friendly players of all ages. The
-            music is very varied and the emphasis is always on
-            everyone enjoying making music.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12" id="news">
-          <h3>The Semerwater Ecumenical Service</h3>
-          <div class="row">
-            <div class="col-md-4">
-              <figure class="img-thumbnail">
-                <img alt="Simon Chorley" src="./assets/semerwater-2019.jpeg" />
-                <figcaption>
-                  Photo: Betsy Everett
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-md-8">
-              <p>
-                A unique event each year on August Bank
-                Holiday Sunday is a service on the shores of
-                Semerwater, Wensleydale's only lake, when
-                Hawes Silver Band plays to accompany the
-                hymns. Inevitably, conditions vary, and one
-                year the vicar conducted the service
-                knee-deep in a flooded lake but the picture
-                shows a more enjoyable occasion!
-              </p>
-            </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="title">Hawes Silver Band</h1>
+            <figure class="img-thumbnail">
+              <img
+                alt="On%20the%20green%202 2"
+                src="./assets/on-the-green-2-2.jpg"
+              />
+              <figcaption>Photo: Betsy Everett</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-12" id="about">
+            <h3>About</h3>
+            <p>
+              Hawes Silver Band, which was formed about 1865, fulfils
+              engagements in Wensleydale every year, including the Semerwater
+              lakeside ecumenical service, and community events. The annual
+              Christmas Charity concert supports national, regional and local
+              charity organisations.
+            </p>
+            <p>
+              The band members travel from places as far afield as Sedbergh and
+              Leyburn to rehearse on Sunday evenings in the Market House in
+              Hawes. It is a typical brass band welcoming friendly players of
+              all ages. The music is very varied and the emphasis is always on
+              everyone enjoying making music.
+            </p>
           </div>
         </div>
-        <div class="col-md-12" id="next">
-          <h3>Concerts &amp; Events</h3>
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Union Jack flag" class="img-thumbnail" src="./assets/union-jack.jpg">
-            </div>
-            <div class="col-md-8">
-              <h4>V.E. Day Celebration Concert</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Hawes Market Hall
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Saturday 10 May 2025, 3.00pm
-              </p>
-              <p>
-                The band celebrates the 80th anniversary of V.E. Day with a concert of
-                great melodies and sing alongs followed by a cream tea. Tickets are
-                just £5 including the cream tea.
-                <br>
-              </p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="news">
+            <h3>The Semerwater Ecumenical Service</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <figure class="img-thumbnail">
+                  <img
+                    alt="Simon Chorley"
+                    src="./assets/semerwater-2019.jpeg"
+                  />
+                  <figcaption>Photo: Betsy Everett</figcaption>
+                </figure>
+              </div>
+              <div class="col-md-8">
+                <p>
+                  A unique event each year on August Bank Holiday Sunday is a
+                  service on the shores of Semerwater, Wensleydale's only lake,
+                  when Hawes Silver Band plays to accompany the hymns.
+                  Inevitably, conditions vary, and one year the vicar conducted
+                  the service knee-deep in a flooded lake but the picture shows
+                  a more enjoyable occasion!
+                </p>
+              </div>
             </div>
           </div>
-          <!-- <div class="row concert">
+          <div class="col-md-12" id="next">
+            <h3>Concerts &amp; Events</h3>
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Union Jack flag"
+                  class="img-thumbnail"
+                  src="./assets/union-jack.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>V.E. Day Celebration Concert</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Hawes Market Hall
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Saturday 10 May 2025, 3.00pm
+                </p>
+                <p>
+                  The band celebrates the 80th anniversary of V.E. Day with a
+                  concert of great melodies and sing alongs followed by a cream
+                  tea. Tickets are just £5 including the cream tea.
+                  <br />
+                </p>
+              </div>
+            </div>
+            <!-- <div class="row concert">
             <div class="col-md-4">
               <img alt="Bainbridge" class="img-thumbnail" src="./assets/bainbridge-ftu.jpg">
             </div>
@@ -196,28 +214,58 @@
               </p>
             </div>
           </div> -->
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Gayle Chapel" class="img-thumbnail" src="./assets/gayle-chapel-ftu.jpg" />
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Gayle Chapel"
+                  class="img-thumbnail"
+                  src="./assets/gayle-chapel-ftu.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Gayle Camp Service</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Gayle Chapel or outdoors nearby
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 6 July 2025, 2:00 pm
+                </p>
+                <p>
+                  The band accompanies the hymns for this traditional service.
+                  <br />
+                </p>
+              </div>
             </div>
-            <div class="col-md-8">
-              <h4>Gayle Camp Service</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Gayle Chapel or outdoors nearby
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 6 July 2025, 2:00 pm
-              </p>
-              <p>
-                The band accompanies the hymns for this
-                traditional service.
-                <br />
-              </p>
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="St Margaret's church, Hawes"
+                  class="img-thumbnail"
+                  src="./assets/st-margarets-hawes.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Community Variety Concert</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  St.Margaret's Parish Church, Hawes
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 19 July 2025, 7:30 pm
+                </p>
+                <p>
+                  Entertainment by Hawes Silver Band, Hawes Community Primary
+                  School and local vocalists. Free entry but a retiring donation
+                  id requested. The Band hopes that this will become a permanent
+                  event in the Hawes calendar.
+                  <br />
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- <div class="row concert">
+            <!-- <div class="row concert">
             <div class="col-md-4">
               <img alt="Aysgarth%20institute%20 %20ftu" class="img-thumbnail"
                 src="./assets/aysgarth-institute---ftu.jpg">
@@ -257,52 +305,58 @@
                 <br>
               </p>
             </div>
-          </div>
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Bainbridge Green" class="img-thumbnail" src="./assets/bainbridge-green-1-2014" />
-            </div>
-            <div class="col-md-8">
-              <h4>Bainbridge Open Air Concert</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Bainbridge Village Green
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 25 August 2025, 1:30 pm
-              </p>
-              <p>
-                Many people think brass band music sounds
-                its best in the open air. Visit lovely
-                Bainbridge on August Bank Holiday Sunday and
-                enjoy the music.
-                <br />
-              </p>
-            </div>
           </div> -->
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Semerwater" class="img-thumbnail" src="./assets/semerwater-ftu.jpg" />
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Bainbridge Green"
+                  class="img-thumbnail"
+                  src="./assets/bainbridge-green-1-2014"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Bainbridge Open Air Concert</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Bainbridge Village Green
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 24 August 2025, 1:30 pm
+                </p>
+                <p>
+                  Many people think brass band music sounds its best in the open
+                  air. Visit lovely Bainbridge on August Bank Holiday Sunday and
+                  enjoy the music.
+                  <br />
+                </p>
+              </div>
             </div>
-            <div class="col-md-8">
-              <h4>Ecumenical Open Air Service</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Semerwater, Wensleydale
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 24 August 2025, 3:00 pm
-              </p>
-              <p>
-                A unique open air service in a beautiful
-                location with the band accompanying the
-                hymns. Approach from nearby Countersett.
-              </p>
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Semerwater"
+                  class="img-thumbnail"
+                  src="./assets/semerwater-ftu.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Ecumenical Open Air Service</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Semerwater, Wensleydale
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 24 August 2025, 3:00 pm
+                </p>
+                <p>
+                  A unique open air service in a beautiful location with the
+                  band accompanying the hymns. Approach from nearby Countersett.
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- <div class="row concert">
+            <!-- <div class="row concert">
             <div class="col-md-4">
               <img alt="Hawes%20ftu" class="img-thumbnail" src="./assets/hawes-ftu.jpg">
             </div>
@@ -323,95 +377,107 @@
               </p>
             </div>
           </div> -->
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Moorcock Show" class="img-thumbnail" src="./assets/moorcock-show-ftu.jpg" />
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Moorcock Show"
+                  class="img-thumbnail"
+                  src="./assets/moorcock-show-ftu.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Moorcock Show</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Moorcock, West of Hawes
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 7 September 2025, 1:00 pm
+                </p>
+                <p>
+                  A friendly local agricultural show in a beautiful setting. The
+                  band plays between 1pm and 2.30. The show opens at 10.30am.
+                  <br />
+                </p>
+              </div>
             </div>
-            <div class="col-md-8">
-              <h4>Moorcock Show</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Moorcock, West of Hawes
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 7 September 2025, 1:00 pm
-              </p>
-              <p>
-                A friendly local agricultural show in a
-                beautiful setting. The band plays between
-                1pm and 2.30. The show opens at 10.30am.
-                <br />
-              </p>
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Hawes"
+                  class="img-thumbnail"
+                  src="./assets/hawes-ftu(1).jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Churches Together Harvest Celebration</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Hawes Market House
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 21 September 2025, 6:30 pm
+                </p>
+                <p>
+                  A non denominational service for this traditional and
+                  colourful celebration with the band accompanying the hymns.
+                  <br />
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Hawes" class="img-thumbnail" src="./assets/hawes-ftu(1).jpg" />
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Hawes"
+                  class="img-thumbnail"
+                  src="./assets/poppy-field.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Remembrance Day Service</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Hawes Parish Church
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Sunday 9 November 2025, 10:15 am
+                </p>
+                <p>
+                  Brian Woof, our principal cornet player, plays the Last Post
+                  and the band accompanies the hymns.
+                </p>
+              </div>
             </div>
-            <div class="col-md-8">
-              <h4>Churches Together Harvest Celebration</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Hawes Market House
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 21 September 2025, 6:30 pm
-              </p>
-              <p>
-                A non denominational service for this
-                traditional and colourful celebration with
-                the band accompanying the hymns.
-                <br />
-              </p>
+            <div class="row concert">
+              <div class="col-md-4">
+                <img
+                  alt="Cornet"
+                  class="img-thumbnail"
+                  src="./assets/cornet-ftu.jpg"
+                />
+              </div>
+              <div class="col-md-8">
+                <h4>Christmas Lights Switch on</h4>
+                <p>
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                  Hawes Market Place
+                </p>
+                <p>
+                  <span class="glyphicon glyphicon-calendar"></span>
+                  Saturday 6 December 2025, 4:00 pm
+                </p>
+                <p>
+                  Hawes is rightly proud of its cheerful Christmas lights and
+                  the band enjoys getting the Christmas festivities off to a
+                  melodious and seasonal start.
+                  <br />
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Hawes" class="img-thumbnail" src="./assets/poppy-field.jpg" />
-            </div>
-            <div class="col-md-8">
-              <h4>Remembrance Day Service</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Hawes Parish Church
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Sunday 9 November 2025, 10:15 am
-              </p>
-              <p>
-                Brian Woof, our principal cornet player,
-                plays the Last Post and the band accompanies
-                the hymns.
-              </p>
-            </div>
-          </div>
-          <div class="row concert">
-            <div class="col-md-4">
-              <img alt="Cornet" class="img-thumbnail" src="./assets/cornet-ftu.jpg" />
-            </div>
-            <div class="col-md-8">
-              <h4>Christmas Lights Switch on</h4>
-              <p>
-                <span class="glyphicon glyphicon-map-marker"></span>
-                Hawes Market Place
-              </p>
-              <p>
-                <span class="glyphicon glyphicon-calendar"></span>
-                Saturday 6 December 2025, 4:00 pm
-              </p>
-              <p>
-                Hawes is rightly proud of its cheerful
-                Christmas lights and the band enjoys getting
-                the Christmas festivities off to a melodious
-                and seasonal start.
-                <br />
-              </p>
-            </div>
-          </div>
-          <!-- <div class="row concert">
+            <!-- <div class="row concert">
             <div class="col-md-4">
               <img alt="The Market Hall, Hawes" class="img-thumbnail"
                 src="./assets/market-house-ftu-(visit-hawes)(1).jpg" />
@@ -432,165 +498,152 @@
               </p>
             </div>
           </div> -->
-        </div>
-        <div class="col-md-12" id="conductor">
-          <div class="row">
-            <div class="col-md-8">
-              <h3>Conductor:</h3>
-              <h3>
-                Stanley Roocroft MBE, LTCL, ACP, CERT Ed.
-              </h3>
-              <p>
-                Hawes Silver Band’s distinguished conductor,
-                Stan Roocroft, was a choral scholar of
-                Blackburn Cathedral and a chorister at the
-                late Queen’s Coronation. After education and
-                teacher training, his first appointment was
-                as Head of Music at the Cathedral School in
-                Wakefield. Many achievements in this period
-                of Stan’s career included conducting the
-                annual Schools Music Festival, founding
-                Wakefield Youth Band and conducting the
-                Yorkshire Youth Band. He was also involved
-                in choral and operatic music and was
-                appointed Head of Music Services for the
-                City of Sheffield Education department.
-              </p>
-              <p>
-                Stan was conductor of the Wensleydale
-                Philharmonic Orchestra for many years. He
-                has been an adjudicator at music and band
-                festivals for over 45 years within the
-                British and International Federation of
-                Festivals and has adjudicated and tutored
-                for the National Chamber Music Competition
-                for Schools Trust.
-              </p>
-              <p>
-                Stan Roocroft was awarded the MBE in 2005
-                for service to the community in North
-                Yorkshire. He lives in Gayle, near Hawes,
-                with his wife Barbara who, together with
-                several of their children, grandchildren and
-                great grandchildren, has been involved in
-                the musical life of Wensleydale.
-              </p>
-            </div>
-            <div class="col-md-4">
-              <figure class="img-thumbnail">
-                <img alt="Stan%20roocroft%201 1" src="./assets/stan-roocroft-1-1.jpg" />
-                <figcaption>
-                  Photo: Betsy Everett
-                </figcaption>
-              </figure>
+          </div>
+          <div class="col-md-12" id="conductor">
+            <div class="row">
+              <div class="col-md-8">
+                <h3>Conductor:</h3>
+                <h3>Stanley Roocroft MBE, LTCL, ACP, CERT Ed.</h3>
+                <p>
+                  Hawes Silver Band’s distinguished conductor, Stan Roocroft,
+                  was a choral scholar of Blackburn Cathedral and a chorister at
+                  the late Queen’s Coronation. After education and teacher
+                  training, his first appointment was as Head of Music at the
+                  Cathedral School in Wakefield. Many achievements in this
+                  period of Stan’s career included conducting the annual Schools
+                  Music Festival, founding Wakefield Youth Band and conducting
+                  the Yorkshire Youth Band. He was also involved in choral and
+                  operatic music and was appointed Head of Music Services for
+                  the City of Sheffield Education department.
+                </p>
+                <p>
+                  Stan was conductor of the Wensleydale Philharmonic Orchestra
+                  for many years. He has been an adjudicator at music and band
+                  festivals for over 45 years within the British and
+                  International Federation of Festivals and has adjudicated and
+                  tutored for the National Chamber Music Competition for Schools
+                  Trust.
+                </p>
+                <p>
+                  Stan Roocroft was awarded the MBE in 2005 for service to the
+                  community in North Yorkshire. He lives in Gayle, near Hawes,
+                  with his wife Barbara who, together with several of their
+                  children, grandchildren and great grandchildren, has been
+                  involved in the musical life of Wensleydale.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <figure class="img-thumbnail">
+                  <img
+                    alt="Stan%20roocroft%201 1"
+                    src="./assets/stan-roocroft-1-1.jpg"
+                  />
+                  <figcaption>Photo: Betsy Everett</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-12" id="meet-the-band">
-          <h3>Meet the Band.</h3>
-          <p>The instrumentalists with Hawes Silver Band are:-</p>
-          <p>Principal cornet. Brian Woof.</p>
-          <p>Solo cornet. Alan Woof.</p>
-          <p>Solo cornet. Richard Downs.</p>
-          <p>Second cornet. Martin Wright.</p>
-          <p>Third cornet. Joy Baggaley.</p>
-          <p>Flugel horn. Sue Woof.</p>
-          <p>Principal tenor horn. Julie Greenslade.</p>
-          <p>Second tenor horn. Anne Johnson.</p>
-          <p>Third tenor horn. Gail Nelson.</p>
-          <p>Principal tenor trombone. Ian Nelson.</p>
-          <p>First baritone horn. John Ransom.</p>
-          <p>Second baritone horn. Rebecca Dutton.</p>
-          <p>Principal euphonium. Roger Iveson.</p>
-          <p>First euphonium. Jack Dewhirst.</p>
-          <p>First Eb bass. Abbie Rhodes.</p>
-          <p>Second Eb bass Gerald Hodgson.</p>
-          <p>Bb bass. Ron Snaith.</p>
-          <p>Percussion. Simon Greenslade.</p>
-          <p>Tuned Percussion. Barbara Greenslade.</p>
-          <p>
-            <br />
-          </p>
-          <p>
-            <strong>Links</strong>
-          </p>
-          <p>
-            <a href="http://www.dalesmusic.co.uk/">Dales Music</a>
-          </p>
-        </div>
-        <div class="col-md-12" id="contact">
-          <h3>Contact Us</h3>
-          <p>
-            The band always welcome anyone to attend rehearsals,
-            particularly if visitors come along with their band
-            instruments to join in a rehearsal. The band has
-            spare instruments for all sections. If you played a
-            brass instrument before and wish to take it up
-            again, or if you are a complete beginner of any age,
-            we will be pleased to assist.
-            <br />
-          </p>
-          <p>
-            To find out more about the band, or to come and join
-            us, please contact the secretary
-          </p>
+          <div class="col-md-12" id="meet-the-band">
+            <h3>Meet the Band.</h3>
+            <p>The instrumentalists with Hawes Silver Band are:-</p>
+            <p>Principal cornet. Brian Woof.</p>
+            <p>Solo cornet. Alan Woof.</p>
+            <p>Solo cornet. Richard Downs.</p>
+            <p>Second cornet. Martin Wright.</p>
+            <p>Third cornet. Joy Baggaley.</p>
+            <p>Flugel horn. Sue Woof.</p>
+            <p>Principal tenor horn. Julie Greenslade.</p>
+            <p>Second tenor horn. Anne Johnson.</p>
+            <p>Third tenor horn. Gail Nelson.</p>
+            <p>Principal tenor trombone. Ian Nelson.</p>
+            <p>First baritone horn. John Ransom.</p>
+            <p>Second baritone horn. Rebecca Dutton.</p>
+            <p>Principal euphonium. Roger Iveson.</p>
+            <p>First euphonium. Jack Dewhirst.</p>
+            <p>First Eb bass. Abbie Rhodes.</p>
+            <p>Second Eb bass Gerald Hodgson.</p>
+            <p>Bb bass. Ron Snaith.</p>
+            <p>Percussion. Simon Greenslade.</p>
+            <p>Tuned Percussion. Barbara Greenslade.</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              <strong>Links</strong>
+            </p>
+            <p>
+              <a href="http://www.dalesmusic.co.uk/">Dales Music</a>
+            </p>
+          </div>
+          <div class="col-md-12" id="contact">
+            <h3>Contact Us</h3>
+            <p>
+              The band always welcome anyone to attend rehearsals, particularly
+              if visitors come along with their band instruments to join in a
+              rehearsal. The band has spare instruments for all sections. If you
+              played a brass instrument before and wish to take it up again, or
+              if you are a complete beginner of any age, we will be pleased to
+              assist.
+              <br />
+            </p>
+            <p>
+              To find out more about the band, or to come and join us, please
+              contact the secretary
+            </p>
 
-          <div class="row">
-            <div class="col-md-8">
-              <ul class="list-unstyled">
-                <li>
-                  <span class="glyphicon glyphicon-envelope"></span>
-                  Mrs. Sue Woof
-                </li>
-                <li>
-                  <p>
-                    Ghyll House, Syle Killington,
-                    Sedburgh, Cumbria. LA10 5EH
-                    <br />
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <ul class="list-unstyled">
-                <li>
-                  <span class="glyphicon glyphicon-phone-alt"></span>
-                  07968 089645
-                </li>
-                <li>
-                  <span class="glyphicon glyphicon-send"></span>
-                  <a href="mailto:bandswoof@gmail.com">bandswoof@gmail.com</a>
-                </li>
-              </ul>
+            <div class="row">
+              <div class="col-md-8">
+                <ul class="list-unstyled">
+                  <li>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    Mrs. Sue Woof
+                  </li>
+                  <li>
+                    <p>
+                      Ghyll House, Syle Killington, Sedburgh, Cumbria. LA10 5EH
+                      <br />
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-unstyled">
+                  <li>
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    07968 089645
+                  </li>
+                  <li>
+                    <span class="glyphicon glyphicon-send"></span>
+                    <a href="mailto:bandswoof@gmail.com">bandswoof@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <script>
-      $(document).ready(function () {
-        $("ul.navbar-nav li.scroll").click(function (event) {
-          event.preventDefault();
-          $("ul.navbar-nav li").removeClass("active");
-          $(this).addClass("active");
-          if ($(".navbar-collapse").hasClass("in"))
-            $(".navbar-collapse").collapse("hide");
-          var target = $(this).children("a").attr("href");
-          var targetPosition = 0;
-          if (target != "#home")
-            targetPosition = $(target).offset().top - 50;
+      <script>
+        $(document).ready(function () {
+          $("ul.navbar-nav li.scroll").click(function (event) {
+            event.preventDefault();
+            $("ul.navbar-nav li").removeClass("active");
+            $(this).addClass("active");
+            if ($(".navbar-collapse").hasClass("in"))
+              $(".navbar-collapse").collapse("hide");
+            var target = $(this).children("a").attr("href");
+            var targetPosition = 0;
+            if (target != "#home") targetPosition = $(target).offset().top - 50;
 
-          $("html, body").animate(
-            {
-              scrollTop: targetPosition,
-            },
-            1000,
-          );
+            $("html, body").animate(
+              {
+                scrollTop: targetPosition,
+              },
+              1000
+            );
+          });
         });
-      });
-    </script>
-  </main>
-</body>
-
+      </script>
+    </main>
+  </body>
 </html>
